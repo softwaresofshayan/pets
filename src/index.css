@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Comic Neue", cursive;
+  background-color: #fff5d7;
+}
+
+.comic-border {
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px #000;
+}
+.comic-border-2 {
+  border: 2px solid #000;
+  box-shadow: 5px 5px 0px #000;
+}
+
+.comic-button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-lg comic-border transition-transform duration-200 ease-in-out;
+}
+
+.comic-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #000;
+  color: black;
+}
+
+.comic-input {
+  @apply bg-white border-2 border-black rounded-lg p-2 comic-border;
+}
+
+.comic-panel {
+  @apply bg-white p-4 rounded-lg comic-border;
+}
+.comic-panel-2 {
+  @apply bg-blue-200 p-2 rounded-lg comic-border-2;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .comic-panel {
+    @apply p-3;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  .text-lg {
+    @apply text-base;
+  }
+}
+
+@media (max-width: 480px) {
+  .comic-button {
+    @apply py-1 px-3 text-sm;
+  }
+
+  .comic-input {
+    @apply p-1;
+  }
+}
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+
+  .grid {
+    @apply grid-cols-1;
+  }
+
+  .md\:grid-cols-2,
+  .md\:grid-cols-3,
+  .md\:grid-cols-4 {
+    @apply grid-cols-1;
+  }
+
+  .md\:flex-row {
+    @apply flex-col;
+  }
+
+  .md\:w-1\/4,
+  .md\:w-3\/4 {
+    @apply w-full;
+  }
+}
+
+/* Ensure text readability on smaller screens */
+@media (max-width: 480px) {
+  body {
+    @apply text-sm;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+}
+
+/* Adjust spacing for mobile */
+@media (max-width: 640px) {
+  .p-4 {
+    @apply p-2;
+  }
+
+  .m-4 {
+    @apply m-2;
+  }
+
+  .gap-8 {
+    @apply gap-4;
+  }
+
+  .mb-12 {
+    @apply mb-6;
+  }
+}
+
+/* Ensure buttons are easily tappable on mobile */
+@media (max-width: 480px) {
+  .comic-button {
+    @apply py-2 px-4 text-base;
+  }
+}
